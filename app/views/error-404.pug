@@ -1,0 +1,24 @@
+extends layout/layout
+
+block vars
+  -title = '404'
+  -bodyClass = '404-page'
+
+block header
+
+block footer
+
+block container
+  section.section-error
+    .container
+      .section-error__wrap
+        .section-error__img
+          img(src="/images/404.png" alt="img_404")
+        p.section-error__msg Đây không phải là trong web bạn đang tìm kiếm
+        form.fom(action="#")
+          .form__group
+            input.form__input(type="text")
+            i.form__icon.fas.fa-search
+        .section-error__link
+          a.link__item(href="/contact.html") liên hệ
+          a.link__item(href="/index.html") Trang chủ

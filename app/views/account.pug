@@ -1,0 +1,57 @@
+extends layout/layout
+
+block vars
+  -title = 'account'
+  -bodyClass = 'account-page'
+
+block container
+  section.section-account
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#blog") Tài khoản
+      .section-account__wrap
+        h3.section-account__title Tài khoản
+        .row
+          .col-sm-12.col-lg-9
+            table.table
+              thead
+                tr
+                  th Order
+                  th Date
+                  th Tình trạng thanh toán
+                  th Tổng
+                  th Nợ
+              tbody
+                each item in account
+                  tr
+                    td
+                      p= item.order
+                    td
+                      p= item.date
+                    td
+                      p= item.status
+                    td
+                      p.price= item.total
+                        span đ
+                    td
+                      p.price= item.dedt
+                        if item.dedt != 0
+                          span đ
+
+          .col-sm-12.col-lg-3
+            .account-detail
+              h4.account-detail__title Chi tiết tài khoản
+              ul.account-detail__list
+                li.account-detail__item
+                  i.icon.fas.fa-user
+                  p.name GiangLe
+                    span.email Leanhgiang89@gamil.com
+
+                li.account-detail__item 
+                  i.icon.fas.fa-map-marker-alt
+                  p Tòa nhà Hà Nội group 442 Đội Cấn, Ba Đình Hà Nội
+
+                li.account-detail__item
+                  img.icon(src="/images/phone.svg" alt="phone")
+                  p (04) 3786 8904

@@ -1,0 +1,96 @@
+extends layout/layout
+
+block vars
+  -title = 'blog detail'
+  -bodyClass = 'blog-detail-page'
+
+block container
+  section.blog-detail
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#blog") Blog
+      .blog-detail__wrap
+        h3.blog-detail__title BLOG
+        .row
+          .col-sm-12.col-lg-3
+            .blog-detail__left
+              .new-post
+                h4.new-post__title bài viết mới nhất
+                ul.new-post__list
+                  li.new-post__item
+                    .new-post__img
+                      img(src= "/images/blog_2.png")
+                    .new-post__content
+                      p.new-post__date 11
+                        span.month / Tháng 5
+                      p.new-post__author Đăng bởi Giangle
+
+                  li.new-post__item
+                    .new-post__img
+                      img(src= "/images/post_2.png")
+                    .new-post__content
+                      p.new-post__date 11
+                        span.month / Tháng 5
+                      p.new-post__author Đăng bởi Giangle
+
+                  li.new-post__item
+                    .new-post__img
+                      img(src= "/images/post_3.png")
+                    .new-post__content
+                      p.new-post__date 11
+                        span.month / Tháng 5
+                      p.new-post__author Đăng bởi Giangle
+
+              .tag
+                h3.heading-secondary Blog Tag
+                ul.tag__list
+                  each tag in product_tag
+                    li.tag__item
+                      a(href="#").tag__link= tag.name
+
+              .video
+                h3.heading-secondary latest video
+                .video__item
+                  button.btn
+                    .icon__play 
+                  img(src="/images/video.png" alt="video")
+
+          .col-sm-12.col-lg-9
+            .blog-detail__right
+              .blog-show__item
+                .item__img
+                  img(src="/images/post_content.png" alt="video")
+                .item__content
+                  p.item__name Nàng béo không ngại diện váy áo nổi bật
+                  p.item__desc Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Trong tiết xuân hè, nàng ngoại cỡ thắp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ mi nhã nhặn.Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ caro, làm nên style vừa hiện đại, vừa phảng phất nét cổ điển.Lối diện đồ hàng ngày đơn giản, khỏe khoắn của cô khi kết hợp chất liệu jean.Nữ blogger rực rỡ khi hòa trộn các gam đỏ, hồng, tím... một cách vui tươi, kèm theo các phụ kiện điệu đà. 
+                  a.item__author(href="#") Bởi NamTran ( 27 / 05 / 2015 )
+                  .item__detail
+                    a.detail__read(href="#") Đọc thêm
+                      i.fas.fa-angle-right
+                    a.detail__comment(href="#") 23 Bình Luận
+
+              .tag-choose
+                p.tag-choose__name Tag:
+                ul.tag-choose__list
+                  li.tag-choose__item Men
+
+              .blog-detail__form
+                h4.form__title đóng góp ý kiến
+                form.form(action="#")
+                  .form__group
+                    label.form__lable Tên
+                      span.form__obligatory *
+                    input.form__input(type="text")
+
+                  .form__group
+                    label.form__lable Email
+                      span.form__obligatory *
+                    input.form__input(type="text")
+
+                  .form__group
+                    label.form__lable ý kiến
+                      span.form__obligatory *
+                    textarea.form__input(rows="15")
+
+                  button.btn.btn--border.btn--black(type="submit") Gửi ý kiến

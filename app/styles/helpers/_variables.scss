@@ -1,0 +1,128 @@
+// COLORS
+
+$color-primary: #03d263;
+$color-secondary: #39c0ff;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-light-1: #d7d9e1;
+$color-grey-light-2: #e9ecf3;
+$color-grey-light-3: #e6e6e6;
+$color-grey-light-4: #e7e7e7;
+$color-grey-light-5: #cdcdcd;
+$color-grey-light-6: #818181;
+$color-grey-light-7: #b4b4b4;
+$color-grey-light-8: #eeeeee;
+$color-grey-light-9: #fafafa;
+$color-grey-light-10: #e2e2e2;
+$color-grey-light-11: #f2f2f2;
+$color-grey-light-12: #d1d1d1;
+$color-grey-light-13: #f1f1f1;
+$color-grey-light-14: #c2c2c2;
+$color-grey-light-15: #ffffff9c;
+$color-grey-light-16: #cbd4b3;
+$color-grey-light-17: #c1c1c1;
+$color-grey-light-18: #e8e8e8;
+$color-grey-light-19: #dadada;
+
+$color-grey-dark-1: #2c3e50;
+$color-grey-dark-2: #757a97;
+$color-grey-dark-3: #737373;
+$color-grey-dark-4: #595959;
+$color-grey-dark-5: #9197a3;
+$color-grey-dark-6: #afb2b7;
+$color-grey-dark-7: #4b4b4b;
+$color-grey-dark-8: #000000a3;
+$color-grey-dark-9: #0e0e0e;
+$color-grey-dark-10: #666262;
+$color-grey-dark-11: #212121;
+$color-grey-dark-12: #f4f4f475;
+$color-grey-dark-13: #262626;
+$color-grey-dark-14: #1a1a1a;
+$color-grey-dark-15: #050505;
+$color-grey-dark-16: #131313;
+$color-grey-dark-17: #494949;
+$color-grey-dark-18: #000000a3;
+$color-grey-dark-19: #1b1b1b;
+
+$color-brown: #6c3c33;
+
+$color-green-dark-1: #789629;
+
+$color-blue-light-1: #4b68b8;
+$color-blue-light-2: #0077b5;
+$color-blue-light-3: #066094;
+$color-blue-light-4: #00acee;
+
+$color-red-dark-1: #be0e22;
+$color-red-dark-2: #dd4b38;
+$color-red-dark-3: #d90a0a;
+$color-red-dark-4: #ff0000;
+
+$box-shadow-1: 0 1rem 4rem rgba($color-black, 0.3);
+// Z-INDEXES
+$z-index0: -10;
+$z-index1: -1;
+$z-index2: 200;
+$z-index3: 300;
+$z-index4: 400;
+$z-index5: 500;
+$z-index6: 600;
+$z-index7: 700;
+$z-index8: 800;
+$z-index9: 900;
+
+// FONTS SITE
+$font-s9: 9px;
+$font-s10: 10px;
+$font-s12: 12px;
+$font-s13: 13px;
+$font-s14: 14px;
+$font-s15: 15px;
+$font-s16: 16px;
+$font-s17: 17px;
+$font-s18: 18px;
+$font-s19: 19px;
+$font-s20: 20px;
+$font-s22: 22px;
+$font-s23: 23px;
+$font-s24: 24px;
+$font-s27: 27px;
+$font-s28: 28px;
+$font-s29: 29px;
+$font-s30: 30px;
+$font-s32: 32px;
+$font-s34: 34px;
+$font-s45: 45px;
+$font-s52: 52px;
+$font-s74: 74px;
+$font-s78: 78px;
+$font-s88: 88px;
+$font-s89: 89px;
+$font-s122: 122px;
+$font-s141: 141px;
+
+// FONTS WEIGHT
+$font-w1: 100;
+$font-w3: 300;
+$font-w6: 600;
+$font-w7: 700;
+$font-w9: 900;
+
+// FONTS
+$font-primary: "Roboto", sans-serif;
+$font-robotoSlab: "Roboto Slab", serif;
+$font-OpenSans: "Open Sans", sans-serif;
+$font-lobster: "Lobster", sans-serif;
+$font-noto: "Noto Sans JP", sans-serif;
+$font-UTMViceroyJF: "UTM ViceroyJF";
+$font-androgyne: "utm-androgyne", sans-serif;
+
+//
+$iphone5: 320px;
+$iphone8-plus: 414px;
+$mobile: 575px;
+$md: 768px;
+$tablet: 991px;
+$xl: 1200px;

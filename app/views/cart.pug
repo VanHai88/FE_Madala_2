@@ -1,0 +1,45 @@
+extends layout/layout
+
+block vars
+  -title = 'cart'
+  -bodyClass = 'cart-page'
+
+block container
+  section.section-cart
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#blog") Cart
+      .section-cart__wrap
+        h3.section-cart__title giỏ hàng
+        table.table
+          thead
+            tr
+              th Ảnh
+              th Tên sản phẩm
+              th Giá
+              th Số lượng
+              th Tổng Số
+              th Xóa
+          tbody
+            each item in cart
+              tr
+                td
+                  img(src= item.img alt="product")
+                td
+                  p= item.name
+                td
+                  p.price= item.price
+                    span đ
+                td
+                  p= item.amount
+                td
+                  p.price= item.price
+                    span đ
+                td
+                  button.btn 
+                    i.fas.fa-trash-alt
+        .section-cart__buttons
+          button.btn.btn--black tiếp tục mua hàng
+          button.btn.btn--black.btn__delete xóa
+          button.btn.btn--black cập nhật

@@ -1,0 +1,33 @@
+extends layout/layout
+
+block vars
+  -title = 'login'
+  -bodyClass = 'login-page'
+
+block container 
+  section.section-login
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#dangky") Đăng Nhập
+      .section-login__wrap
+        .section-login__header
+          h3.heading-main đăng nhập
+          a.btn.btn--black(href="#") Đăng Ký
+        form.form(action="#")
+          h4.form__title khách hàng đăng ký
+          p.form__text Nếu bạn có tài khoản, xin vui lòng đăng nhập
+
+          .form__group
+            label.form__lable Địa chỉ email
+              span.form__obligatory *
+            input.form__input(type="text")
+
+          .form__group
+            label.form__lable Password
+              span.form__obligatory *
+            input.form__input(type="password")
+
+          .form__buttons
+            a.form__link(href="#") Quên mật khẩu?
+            button.btn.btn--border.btn--black(type="submit") Đăng nhập

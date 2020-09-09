@@ -1,0 +1,27 @@
+.video__item {
+  position: relative;
+
+  .btn {
+    @include centerPosition("both");
+    padding: 52px;
+    border-radius: 105px;
+    border: none;
+    background-color: $color-grey-dark-8;
+
+    &:focus {
+      outline: none;
+    }
+
+    .icon__play {
+      position: absolute;
+      top: 35px;
+      left: 46px;
+      width: 0;
+
+      height: 0;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-left: 25px solid $color-grey-dark-9;
+    }
+  }
+}

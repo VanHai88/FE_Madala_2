@@ -1,0 +1,36 @@
+.btn {
+  @include button($color-white);
+  font-size: $font-s14;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn--border {
+  border: 2px solid $color-grey-light-3;
+}
+
+.btn--green {
+  &:hover {
+    border: 2px solid $color-green-dark-1;
+    color: $color-white;
+    background-color: $color-green-dark-1;
+  }
+}
+
+.btn--blue {
+  background-color: $color-blue-light-1;
+  color: $color-white;
+}
+
+.btn--black {
+  color: $color-white;
+  background-color: $color-black;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-green-dark-1;
+  }
+}

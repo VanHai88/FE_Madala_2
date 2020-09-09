@@ -1,0 +1,95 @@
+.section-cart {
+  margin-bottom: 8.5rem;
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: $font-s28;
+    text-transform: uppercase;
+  }
+
+  .table {
+    td {
+      @include minWidth($mobile) {
+        &:nth-child(1) {
+          width: 20rem;
+        }
+        &:nth-child(2) {
+          width: 40rem;
+        }
+
+        &:last-child {
+          width: 6.8rem;
+        }
+      }
+
+      @include maxWidth($mobile) {
+        /*
+        Label the data
+        */
+        &:nth-of-type(1):before {
+          content: "ẢNH";
+        }
+        &:nth-of-type(2):before {
+          content: "TÊN SẢN PHẨM";
+        }
+        &:nth-of-type(3):before {
+          content: "GIÁ";
+        }
+        &:nth-of-type(4):before {
+          content: "SỐ LƯỢNG";
+        }
+        &:nth-of-type(5):before {
+          content: "TỔNG SỐ";
+        }
+        &:nth-of-type(6):before {
+          content: "XÓA";
+        }
+      }
+    }
+  }
+
+  .price {
+    display: flex;
+    justify-content: center;
+    font-family: $font-lobster;
+
+    @include maxWidth($mobile) {
+      justify-content: flex-start;
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 3px;
+      font-size: $font-s9;
+      vertical-align: super;
+    }
+  }
+
+  &__buttons {
+    margin-top: 3.2rem;
+    text-align: end;
+
+    .btn {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: $font-s12;
+      border-radius: 0;
+
+      @include maxWidth($mobile) {
+        display: block;
+        margin-left: auto;
+      }
+
+      &__delete {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin: 0 1rem;
+
+        @include maxWidth($mobile) {
+          margin: 1rem 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

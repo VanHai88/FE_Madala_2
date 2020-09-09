@@ -1,0 +1,200 @@
+extends layout/layout
+
+block vars
+    -title = 'detail'
+    -bodyClass = 'product-detail-page'
+
+block container
+    section.section-product-detail
+        .container
+            .path
+                each path_data in detailLink
+                    a.path__name(href=path_data.link)= path_data.name
+                a.path__name(href="#lactay") Lắc tay
+            .section-product-detail__wrapper
+                .row
+                    .col-sm-12.col-md-12.col-lg-7
+                        .section-product-detail__left
+                            .section-product-detail__img
+                                .slide-top#slide-top-js.arrow
+                                .section-product-detail__slider#slider-js
+                                    img.section-product-detail__thumbnail.thumbnail__active.thumbnail-js(src="./images/product_15.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_12.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_13.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_14.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_12.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_13.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_14.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_14.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_14.png" alt="product")
+                                    img.section-product-detail__thumbnail.thumbnail-js(src="./images/product_14.png" alt="product")
+
+                                .slide-bottom#slide-bottom-js.arrow
+                            .section-product-detail__featured
+                                img#featured(src="./images/product_15.png" alt="product")
+
+                    .col-sm-12.col-md-12.col-lg-5     
+                        .section-product-detail__right
+                            h2.product__name Lắc tay TYFFANY xu hướng mới nhất 
+                            h3.product__category TYFFANY ms 3201
+                            p.product__price 950.000đ
+                                span.product__price-first 999.000đ
+                            p.product__desc Không thể phủ nhận, thời trang và phong cách chính là “tuyên ngôn” không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời trang, nhiều chị em không ngần ngại chi tiêu “mạnh tay” để sở hữu những món đồ yêu thích.
+                            form.product__form(action="#")
+                                .form__ground
+                                    label.form__lable màu sắc
+                                    select.form__input
+                                        option(value="0") Chọn Màu
+                                        option(value="1") Màu Đồng
+                                        option(value="2") Màu Bạc
+                                        option(value="3") Màu Vàng
+                                .form__ground
+                                    label.form__lable size
+                                    select.form__input
+                                        option(value="0") Chọn size
+                                        option(value="1") 12
+                                        option(value="2") 13
+                                        option(value="3") 14
+                                .form__ground
+                                    label.form__lable số lượng
+                                    input.form__input(type="text" value=0)
+                                .form__buttons
+                                    button.btn.btn--green.btn--border Mua hàng
+                                    button.btn.btn--green.btn--border 
+                                        i.fas.fa-heart
+                                    button.btn.btn--green.btn--border
+                                        i.fas.fa-sync-alt
+                            .social-network
+                                p.social-network__title Shipping &amp; 
+                                    span Retuens
+                                ul.social-network__list
+                                    li.social-network__item
+                                        button.btn.btn--blue.btn__facebook-js 
+                                            i.fab.fa-facebook-square.item__icon 
+                                            span.item__name Like
+                                        .count.count--facebook-js  0
+                                            .arrow-left  
+                                    li.social-network__item
+                                        button.btn.btn--border.btn__tweet-js 
+                                            i.fab.fa-twitter.item__icon.item__icon--tweet  
+                                            span.item__name Tweet
+                                        .count.count--tweet-js 0
+                                            .arrow-left
+                                    li.social-network__item
+                                        button.btn.btn--border.btn__google.btn__google-js 
+                                            span.icon__google g
+                                            span +1
+                                        .count.count--google-js 0
+                                            .arrow-left
+                                button.btn.btn__in
+                                    i.fab.fa-linkedin-in.item__icon.item__icon--in   
+                                    span.item__name Share
+                                button.btn.btn--border.btn__pinterest
+                                    i.fab.fa-pinterest-p
+                                    span.icon__pinterest in it
+    section.section-detail-additional
+        .container
+            .section-detail-additional__wrapper
+                .row
+                    .col-sm-12.col-lg-9
+                        .section-detail-additional__left 
+                            .overview
+                                ul.overview__list
+                                    li.overview__item.overview__item-js.overview__active đặc điểm nổi bật
+                                    li.overview__item.overview__item-js thông tin sản phẩm
+                                    li.overview__item.overview__item-js đánh giá 
+                                .overview__Highlights.overview__block.overview__active
+                                    .Highlights__item
+                                        .Highlights__info
+                                            h3.Highlights__title the mark of a legend               
+                                            p.Highlights__desc  Tự hào được ghi là năm mà Tiffany &amp; Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                                        .Highlights__image
+                                            img(src="./images/product_10.png" alt="product_1")
+                                    .Highlights__item
+                                        .Highlights__info
+                                            h3.Highlights__title the mark of a legend               
+                                            p.Highlights__desc  Tự hào được ghi là năm mà Tiffany &amp; Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                                        .Highlights__image
+                                            img(src="./images/product_16.png" alt="product")
+                                    .Highlights__item
+                                        .Highlights__info
+                                            h3.Highlights__title the mark of a legend               
+                                            p.Highlights__desc  Tự hào được ghi là năm mà Tiffany &amp; Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                                        .Highlights__image
+                                            img(src="./images/product_17.png" alt="product")
+                                    .Highlights__item
+                                        .Highlights__info
+                                            h3.Highlights__title the mark of a legend               
+                                            p.Highlights__desc  Tự hào được ghi là năm mà Tiffany &amp; Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+                                        .Highlights__image
+                                            img(src="./images/product_18.png" alt="product")
+
+                                .overview__block.product-info
+                                    .product-info__img
+                                        img(src="./images/product_view.png" alt="product")
+                                    p.product-info__desc Không thể phủ nhận, thời trang và phong cách chính là “tuyên ngôn” không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời trang, nhiều chị em không ngần ngại chi tiêu “mạnh tay” để sở hữu những món đồ yêu thích.
+
+                                .overview__block.product-rating
+                                    .product-rating__form
+                                        h3.heading-secondary hãy để lại nhận xét của bạn
+                                        ul.form__list
+                                            - for (var i=0; i<5; i++)
+                                                li.form__item
+                                                    i.fas.fa-heart
+                                        form(action="#")
+                                            .form__ground
+                                                label.form__lable Nội dung
+                                                textarea.form__input(rows="5")
+                                            button.btn.btn--green.btn--border(type="submit") Nhận Xét
+
+                                    .product-rating__comment
+                                        h3.heading-secondary Nhận xét gần đây
+                                        ul.comment__list
+                                            li.comment__item
+                                                .comment__product 
+                                                    p.product__name Lắc tay TYFFANY xu hướng mới nhất
+                                                    ul.rating__list
+                                                        - for (var i=0; i<5; i++)
+                                                            li.rating__item
+                                                                i.fas.fa-heart
+                                                .comment__infor
+                                                    .comment__auther Nhận xét bởi
+                                                        span.auther__name Nguyễn Văn Hải
+                                                        | vào ngày
+                                                        span.comment__date 18-8-2020
+                                                    .comment__content
+                                                        img.auther__avatar(src="/images/auther.jpg" alt="avatar")
+                                                        p.connent__item Đẹp lắm luôn!!
+
+                    .col-sm-3.col-md-3.col-lg-3
+                        .section-detail-additional__right
+                            .bestseller
+                                h3.heading-secondary sản phẩm bán chạy
+                                .item-proposal__list
+                                    each val in bestseller
+                                        .item-proposal__item
+                                            .item-proposal__image
+                                                img(src="./images/product_19.png" alt="product")
+                                            .item-proposal__infor
+                                                p.item-proposal__name= val.name                       
+                                                .item-proposal__rating
+                                                    - for (var i=0; i<val.rating; i++)
+                                                        i.fas.fa-heart
+                                                    span.quantity (4 lượt mua)
+                                                p.item-proposal__price= val.price 
+                                                    span đ
+                            .buy-multiple
+                                h3.heading-secondary sản phẩm mua nhiều
+                                .item-proposal__list
+                                    each val in buyMultiple
+                                        .item-proposal__item
+                                            .item-proposal__image
+                                                img(src="./images/product_19.png" alt="product")
+                                            .item-proposal__infor
+                                                p.item-proposal__name= val.name                       
+                                                .item-proposal__rating
+                                                    - for (var i=0; i<val.rating; i++)
+                                                        i.fas.fa-heart
+                                                    span.quantity (4 lượt mua)
+                                                p.item-proposal__price= val.price 
+                                                    span đ

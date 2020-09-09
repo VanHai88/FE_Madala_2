@@ -1,0 +1,70 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    @include maxWidth($mobile) {
+      display: block;
+    }
+  }
+
+  thead > tr {
+    background-color: $color-grey-light-9;
+
+    @include maxWidth($mobile) {
+      display: none;
+    }
+  }
+
+  tr {
+    @include maxWidth($mobile) {
+      border: 1px solid #ccc;
+    }
+  }
+
+  td,
+  th {
+    border: 1px solid $color-grey-light-10;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  th {
+    font-size: $font-s16;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  td {
+    position: relative;
+    font-size: $font-s13;
+    text-align: center;
+    vertical-align: middle;
+
+    @include maxWidth($mobile) {
+      /* Behave  like a "row" */
+      position: relative;
+      padding-left: 50%;
+      border: none;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    &::before {
+      @include maxWidth($mobile) {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+extends layout/layout
+
+block vars
+  -title = 'contact'
+  -bodyClass = 'contact-page'
+
+block container 
+  section.section-contact
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#dangky") Liên hệ
+      .section-contact__wrap
+        h3.heading-main Liên hệ
+        .row
+          .col-sm-12.col-lg-6
+            .section-contact__map
+              iframe(width='100%' height='400' src='https://maps.google.com/maps?q=105+Duy+Tân,+Hòa+Thuận+Nam,+Hải+Châu,+Đà+Nẵng+550000,+Việt+Nam&t=&z=15&ie=UTF8&iwloc=&output=embed' frameborder='0' scrolling='no' marginheight='0' marginwidth='0')
+          .col-sm-12.col-lg-6
+            .section-contact__form
+              h4.form__title gửi email cho chúng tôi
+              form.form(action="#")
+                .form__group
+                  label.form__lable Tên
+                    span.form__obligatory *
+                  input.form__input(type="text")
+
+                .form__group
+                  label.form__lable Email
+                    span.form__obligatory *
+                  input.form__input(type="text")
+
+                .form__group
+                  label.form__lable.form__lable-textarea Tin nhắn
+                    span.form__obligatory *
+                  textarea.form__input.form__textarea(rows="10")
+
+                .form__buttons
+                  button.btn.btn--border.btn--black(type="submit") Gửi

@@ -1,0 +1,42 @@
+.control-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid $color-grey-light-3;
+
+    @include maxWidth($tablet) {
+        margin-top: 5rem;
+    }
+
+    @include maxWidth($mobile) {
+        margin-top: 2rem;
+    }
+
+    &__show {
+        display: flex;
+        align-items: center;
+        font-size: $font-s14;
+    }
+
+    .page-number {
+        color: $color-grey-light-3;
+    }
+
+    .grid,
+    .list {
+        color: $color-grey-light-6;
+        cursor: pointer;
+    }
+
+    .active {
+        color: $color-black;
+    }
+
+    .grid {
+        margin-right: 1rem;
+    }
+
+    .btn {
+        padding: 0 0.5rem;
+    }
+}

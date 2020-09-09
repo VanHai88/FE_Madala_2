@@ -1,0 +1,118 @@
+-
+  var menus = [
+    {name: "TRANG CHỦ", link:"./index.html"}, 
+    {name: "GIỚI THIỆU", link:"./about.html"},
+    {name: "SẢN PHẨM", link:"./products.html", 
+      submenu:[
+        {title_name:"DƯỠNG GIA", 
+          submenu_item:[{name: "Áo khoác", link:"./product-detail.html"}, 
+            { name: "Bộ áo liên quần", link:"./product-detail.html"},
+            {name: "Dresses", link:"./product-detail.html"},
+            {name: "Quần / Váy", link:"./product-detail.html"},
+            {name: "Quần short", link:"./product-detail.html"},
+            {name: "Quần jean", link:"./product-detail.html"},
+            {name: "Đồ đan", link:"./product-detail.html"},
+            { name: "Áo ni", link:"./product-detail.html"}]},
+        {title_name:"NƯỚC HOA",
+          submenu_item:[{name: "Áo cánh / Áo sơ mi", link:"./product-detail.html"}, 
+            { name: "Túi sách 	& Balô", link:"./product-detail.html"},
+            {name: "Khăn quàng cổ và Foulards", link:"./product-detail.html"},
+            {name: "Dệt kira Hats & Gloves", link:"./product-detail.html"},
+            {name: "Vớ & Socks", link:"./product-detail.html"},{name: "Jewerly", link:"./product-detail.html"},
+            {name: "Bị bảo vệ", link:"./product-detail.html"},{name: "Giày", link:"./product-detail.html"}]},
+        {title_name:"TRANG SỨC", 
+          submenu_item:[
+            {name: "Áo cánh / Áo sơ mi", link:"./product-detail.html"}, 
+            { name: "Túi sách 	& Balô", link:"./product-detail.html"},
+            {name: "Khăn quàng cổ và Foulards", link:"./product-detail.html"},
+            {name: "Dệt kira Hats & Gloves", link:"./product-detail.html"},
+            {name: "Vớ & Socks", link:"./product-detail.html"},
+            {name: "Jewerly", link:"./product-detail.html"},
+            {name: "Bị bảo vệ", link:"./product-detail.html"},
+            {name: "Giày", link:"./product-detail.html"}]}]
+    },
+    {name: "TIN TỨC", link:"./blog.html"},
+    {name: "BẢN ĐỒ", link:"./error-404.html"},
+    {name: "LIÊN HỆ", link:"./contact.html"}]
+
+- var cart_products = [{image: "./images/product.png", name:"Áo sơ mi Nam", price:"120.000"},{image: "./images/product.png", name:"Áo sơ mi Nam", price:"120.000"}]
+
+-
+  const footers = [
+    {name: "CHUYỂN HÀNG", subfooter:["mua sắm trực tuyến","Đến từ chúng tôi gửi đến", "Chính sách vận chuyển", "vận chuyển thông tin"]}, 
+    {name: "HỖ TRỢ", subfooter:["Câu chuyện của chúng tôi","Thanh toán an toàn", "Tùy chọn vận chuyển", "Chính sách vận chuyển"]}, 
+    {name: "THÔNG TIN", subfooter:["về Chúng Tôi","Điều khoản & điều kiện", "Chính Sách Riêng Tư", "Đơn đặt hàng và Returns"]}, 
+    {name: "MY ACCOUNT", last: true, subfooter:["Xem Giỏ Hàng","Sản phẩm yêu thích", "kiểm tra", "Theo dõi đặt hàng của tôi"]}
+    ]
+
+-
+  const authors = [
+    {name:"TUTILE", avatar:"images/feedback_1--img.png", role: "Giảm đốc phát trển sản phẩm", comment:"Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"},
+    {name:"TUTILE", avatar:"images/feedback_1--img.png", role: "Giảm đốc phát trển sản phẩm", comment:"Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"},
+    {name:"TUTILE", avatar:"images/feedback_2--img.png", role: "Giảm đốc phát trển sản phẩm", comment:"Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"}
+    ]
+
+-
+  const products = [
+    {img: "images/product_1.jpg", title: "tyffany", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, {img: "images/product_2.jpg", title: "OHUI", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, 
+    {img: "images/product_3.jpg", title: "home", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, {img: "images/product_4.jpg", title: "sarvon", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, 
+    {img: "images/product_5.jpg", title: "debora", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, {img: "images/product_6.jpg", title: "tyffany", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, 
+    {img: "images/product_8.png", title: "home", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}, {img: "images/product_9.png", title: "debora", name: "Mỹ phẩm châu Âu", price: "355.000", price_sale: "450.000"}
+    ]
+
+-
+  const productTagHome = [
+    {name: "Đồng hồ"}, 
+    {name: "Túi"}, 
+    {name: "Phụ kiện"}, 
+    {name: "Đồng hồ"}, 
+    {name: "Túi"}, 
+    {name: "Giày"}, 
+    {name: "Sandal"}, 
+    {name: "Áo sơ mi"}, 
+    {name: "Nước hoa"}, 
+    {name: "Giày"}, 
+    {name: "Sandal"}, 
+    {name: "Trẻ em"}, 
+    {name: "Thời trang nữ"}, 
+    {name: "Trẻ em"}, 
+    {name: "Thời trang nữ"}
+    ]
+
+
+-
+  const detailLink = [
+    {name: "Home", link: "#home"}, 
+    {name: "Sản phẩm", link: "#sanpham"},
+    {name: "Trang sức", link: "#trangsuc"},
+    ]
+
+-
+  const bestseller = [
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"}
+    ]
+
+-
+  const buyMultiple = [
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},
+    {name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"}
+    ]
+
+
+- var detail_path_data = [{name: "Home", link: "#home"}, {name: "Sản phẩm", link: "#sanpham"},{name: "Trang sức", link: "#trangsuc"}]
+
+- var bestseller_data = [{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"}]
+
+- var buy_multiple_data = [{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"},{name: "Mỹ phẩm châu âu", rating: 5, price: "355.000"}]
+
+- var categorise_data = [{title: "Mỹ phẩm", item: [{name: "sữa rửa mặt", value: 1}, {name: "kem dưỡng da", value: 2}, {name: "kem chống nắng", value: 3}, {name: "son môi", value: 4}]}, {title: "trang sức", item: [{name: "Vòng tay", value: 1}, {name: "Nhẫn", value: 2}, {name: "Lắc chân", value: 3}, {name: "Phụ kiện khác", value: 4}, {name: "Giày Lưới Giày Mọi", value: 5}]}, {title: "phụ kiện", item: [{name: "túi xách", value: 1}, {name: "đồng hồ", value: 2}]}, {title: "nước hoa", item: [{name: "nước hoa việt nam", value: 1}, {name: "nước hoa mỹ", value: 2}, {name: "nước hoa pháp", value: 3}, {name: "nước hoa nhật", value: 4}, {name: "nước hoa quảng nam", value: 5}]}]
+
+- var product_tag = [{name: "Hoa tai"}, {name: "Son"}, {name: "Nước hoa"}, {name: "Giày"}, {name: "Sandal"}, {name: "Áo sơ mi"}, {name: "Nước hoa"}, {name: "Trẻ em"}, {name: "Thời trang nữ"}]
+
+- var cart = [{img: "/images/cart_product_1.png", name: "lắc tay D&G", price: "345.000", amount: 1, quantity: "345.000"}, {img: "/images/cart_product_1.png", name: "lắc tay D&G", price: "345.000", amount: 2, quantity: "345.000"}]
+
+- var account = [{order: "#1006", date: "May 13, 2013", status: "Đã thanh toán", total: "350.000", dedt: "0"},{order: "#1006", date: "May 13, 2013", status: "Đã thanh toán", total: "350.000", dedt: "0"},{order: "#1006", date: "May 13, 2013", status: "Đã thanh toán", total: "350.000", dedt: "0"},{order: "#1006", date: "May 13, 2013", status: "Thanh toán 50%", total: "350.000", dedt: "275.000"}]

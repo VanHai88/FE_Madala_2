@@ -1,0 +1,223 @@
+extends layout/layout
+
+block vars
+  -title = 'Welcome to Gulp Template workflow'
+  -bodyClass = 'home-page'
+
+block script
+  script(src="scripts/slick.js")
+block container
+  <!-- Banner-->
+  .banner
+    .container
+      .banner__wrapper
+        .col-sm-5
+          .banner__wrapper-product
+            img.banner__product-img(src="images/layer_product_new.png" alt="layer product")
+            .product__introduction
+              p.product__introduction-name GreenVera
+              p.product__introduction-info Sản phẩm tinh dầu dưỡng da mới nhất của mandala
+              p.product__introduction-price GIÁ CHỈ 750.000
+                span đ
+              a.product__introduction-buy(href="#") Mua hàng 
+        .col-sm-7
+          .layer__block-img
+            img.layer-img(src="images/layer.png" alt="layer")
+
+  <!-- Block Sale-->
+  section.section__sale
+    .container
+      .sale__wrapper
+        .row
+          .col-xs-12.col-sm-4
+            .sale__wrapper-block
+              img.sale-img(src="images/plane.svg" alt="plane_icon")
+              p.sale-text Miễn phí vận chuyển trên toàn quốc
+          .col-xs-12.col-sm-4
+            .sale__wrapper-block.sale__wrapper-center
+              img.sale-img(src="images/gift.svg" alt="gift_icon")
+              p.sale-text Nhận ngay quà tặng trị giá 350.000đ
+          .col-xs-12.col-sm-4
+            .sale__wrapper-block
+              img.sale-img(src="images/star.svg" alt="star_icon")
+              p.sale-text Giảm 30% cho đơn hàng trên 5.000.000đ
+
+  <!-- Block Product Ads-->
+
+  section.section__product-ads
+    .container
+      .product__ads
+        .product__ads-1
+          .item__box-1
+            .item__sub-1
+              img.img-fluid(src="images/item-mother-1.png" alt="item_1")
+            .item__sub-2
+              img.img-fluid(src="images/item-mother-2.png" alt="item_2")
+          .item__box-2
+            button.box-2--btn
+              .icon__play 
+            img.img-fluid(src="images/item_2--right--img.png" alt="item_3")
+        .product__ads-2        
+          .item__box-1
+            .item__sub-1
+              img.img-fluid(src="images/item-mother-3.png" alt="item_4")
+            .item__sub-2
+              img.img-fluid(src="images/item-mother-4.png" alt="item_5")
+          .item__box-2
+            img.img-fluid(src="images/Item_3--left--img.jpg" alt="item_6")
+
+  <!-- Block Share Products-->
+  section.section__feedback
+    .container
+      .slider__feedback.slider__feedback-control
+        each author in authors
+          .slider__feedback-item
+            .feedback__item-content
+              .row
+                .col-sm-12.col-lg-8
+                  p.content-text= author.comment
+            .feedback__item-infor
+              .infor-avatar
+                img(src= author.avatar alt="feedback_1")
+              .infor-block
+                h6= author.name
+                  span.infor-name= author.role
+
+  section.section__bestseller-products
+    .bestseller__products
+      .container
+        ul.bestseller__products-list
+          li.list__item
+            a.list__item-link(href="#") Sản phẩm mới
+          li.list__item
+            a.list__item-link.active(href="#") Sản phẩm bán chạy
+          li.list__item
+            a.list__item-link(href="#") Sản phẩm đặc biệt
+        .line
+          span.line-before
+          span.line-center //////////////
+          span.line-after
+
+    .bestseller__products-menu
+      .container
+        ul.menu-list
+          .col-left
+            li.menu-list--item Mỹ phẩm
+            li.menu-list--item Chăm sóc da
+            li.menu-list--item Dành cho tóc
+          .col-right
+            li.menu-list--item Nước hoa
+            li.menu-list--item Trang sức
+            li.menu-list--item Quà tặng
+
+      .product__show.product__show-control
+        each product in products
+          .product__show-item
+            .item__img
+              img(src= product.img alt="product")
+            .item__content
+              p.item__content-title= product.title
+              p.item__content-name= product.name
+              .line
+              .item__content-price 
+                p= product.price
+                  span đ
+                p.price-sale= product.price_sale
+                  span đ
+            .item__btn
+              button.item__btn-icon.item__btn-buy
+                span.icon-text Mua hàng
+              button.item__btn-icon 
+                i.fas.fa-heart
+              button.item__btn-icon.item__btn-reload 
+                i.fas.fa-sync-alt
+
+  section.section__additional-information
+    .container
+      .information__contact
+        .contact__list.contact__list-control
+          .contact__list-item
+            .item-icon
+              img(src="images/facebook.svg" alt="facebook")
+            .item-name
+              span facebook
+          .contact__list-item
+            .item-icon
+              img(src="images/twitter.svg" alt="twitter")
+            .item-name
+              span twitter
+          .contact__list-item
+            .item-icon
+              img(src="images/instagram.svg" alt="instagram")
+            .item-name
+              span instagram
+          .contact__list-item
+            .item-icon
+              img(src="images/google.svg" alt="google")
+            .item-name
+              span google +
+          .contact__list-item
+            .item-icon
+              img(src="images/pinterest.svg" alt="pinterest")
+            .item-name
+              span pinterest
+          .contact__list-item
+            .item-icon
+              img(src="images/linkedin.svg" alt="linkedin")
+            .item-name
+              span linkedin
+
+      .information__details
+        .row
+          .col-xs-12.col-sm-6.col-lg-4
+            .destail__about__us
+              .destail__block
+                h2.destail-title Về chúng tôi
+                span.line-center ///////////////////
+              .destail__content
+                .destail__content-logo
+                  a(href='#')
+                    img(src="./images/logo.png")
+                .destail__content-title
+                  h2 giới thiệu chung về mỹ phẩm handmade mandala
+                .destail__content-introduce
+                  p Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+                  a.introduce-link(href="#") Xem thêm
+          .col-xs-12.col-sm-6.col-lg-4
+            .destail__blog
+              .destail__block
+                h2.destail-title blog
+                span.line-center ///////////////////
+            .destail__blog-img
+              img(src="/images/blog-img.png" alt="blog")
+            p.destail__blog-title Review son kem bourjois velvet
+            p.destail__blog-introduce Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hăm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
+            a.destail__blog-author(href="#") Bởi NamTran (27/05/2015)
+            .destail__blog-detail
+              a.introduce-link(href="#") Đọc thêm
+                i.fas.fa-angle-right
+              a.comment-index(href="#") 23 Bình luận
+
+          .col-sm-12.col-lg-4    
+            .row
+              .col-sm-6.col-lg-12
+                .destail__send-email
+                  .destail__block
+                    h2.destail-title gửi email cho chúng tôi
+                    span.line-center ///////////////////
+
+                  .send__email-from
+                    form
+                      input.email-input(type='text' placeholder='Email của bạn')
+                      p.email-text Gửi email để nhận những ưu đãi mới nhất
+                      button.email-btn(type='submit') Gửi
+              .col-sm-6.col-lg-12
+                .destail__product-tag
+                  .destail__block
+                    h2.destail-title tag sản phẩm
+                    span.line-center ///////////////////
+
+                  ul.product__tag-list
+                    each tag in productTagHome
+                      li.tag-item
+                        a(href="#").tag-item-link= tag.name

@@ -1,0 +1,119 @@
+.section-account {
+  margin-bottom: 8.5rem;
+
+  &__title {
+    font-size: $font-s28;
+    text-transform: uppercase;
+  }
+
+  .table {
+    margin-top: 2.5rem;
+
+    th,
+    td,
+    tr {
+      @include minWidth($mobile) {
+        padding: 2rem 0;
+      }
+    }
+
+    thead th {
+      font-size: $font-s12;
+      font-weight: $font-w7;
+    }
+
+    td {
+      font-size: $font-s14;
+
+      @include maxWidth($mobile) {
+        &:nth-of-type(1):before {
+          content: "ORDER:";
+        }
+        &:nth-of-type(2):before {
+          content: "DATE:";
+        }
+        &:nth-of-type(3):before {
+          content: "TÌNH TRẠNG THANH TOÁN:";
+          top: 1.5rem;
+          color: $color-black;
+          white-space: break-spaces;
+          line-height: 2.5rem;
+        }
+        &:nth-of-type(4):before {
+          content: "TỔNG:";
+        }
+        &:nth-of-type(5):before {
+          content: "NỢ:";
+        }
+      }
+
+      &:nth-child(3) {
+        color: $color-red-dark-3;
+
+        @include maxWidth($mobile) {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  .account-detail {
+    margin-top: -1.5rem;
+
+    @include maxWidth($tablet) {
+      margin-top: 3rem;
+    }
+
+    &__item {
+      display: flex;
+      font-size: $font-s14;
+      line-height: 2.5rem;
+
+      .icon {
+        margin-top: 5px;
+        margin-right: 1.5rem;
+      }
+
+      &:first-child {
+        margin-bottom: 3rem;
+
+        .name {
+          font-size: $font-s20;
+        }
+
+        .email {
+          display: block;
+          font-size: $font-s14;
+        }
+      }
+
+      &:last-child {
+        margin-top: 1rem;
+
+        .icon {
+          margin-right: 1rem;
+          filter: brightness(0);
+        }
+      }
+    }
+
+    &__title {
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid $color-grey-light-4;
+      margin-bottom: 2rem;
+      font-size: $font-s14;
+
+      font-weight: $font-w6;
+      text-transform: uppercase;
+    }
+  }
+
+  .price {
+    span {
+      display: inline-block;
+      font-size: $font-s9;
+      vertical-align: super;
+    }
+  }
+}

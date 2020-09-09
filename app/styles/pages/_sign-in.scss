@@ -1,0 +1,63 @@
+.sign-in {
+  margin-bottom: 6.8rem;
+
+  .heading-main {
+    margin-bottom: 1.8rem;
+  }
+
+  .form {
+    padding: 4rem 5rem;
+    padding-top: 5px;
+    background-color: $color-grey-light-11;
+
+    &__title {
+      margin-top: 3.5rem;
+      margin-bottom: 1rem;
+      font-size: $font-s18;
+      text-transform: uppercase;
+    }
+
+    &__lable {
+      margin: 1rem 0;
+      font-size: $font-s12;
+    }
+
+    &__obligatory {
+      margin-left: 5px;
+    }
+
+    &__input {
+      padding: 4px;
+    }
+
+    &__announce {
+      display: flex;
+      margin-top: 1rem;
+
+      input {
+        opacity: 0.1;
+      }
+
+      .form__lable {
+        margin: 0;
+        margin-left: 5px;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.8rem;
+
+      .btn {
+        padding: 5px 10px;
+        font-size: $font-s12;
+
+        img {
+          margin-right: 5px;
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}

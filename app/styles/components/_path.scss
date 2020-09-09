@@ -1,0 +1,29 @@
+.path {
+  padding-top: 2rem;
+  padding-bottom: 2.3rem;
+  border-bottom: 1px dashed $color-grey-light-3;
+  margin-top: 8rem;
+  margin-bottom: 3.3rem;
+
+  &__name {
+    color: $color-grey-dark-3;
+    font-family: $font-OpenSans;
+    font-size: $font-s12;
+
+    &:hover {
+      color: $color-green-dark-1;
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        @include fontIcon("\f054", 9px);
+        margin: 0 5px;
+      }
+    }
+
+    &:last-child {
+      color: $color-green-dark-1;
+    }
+  }
+}

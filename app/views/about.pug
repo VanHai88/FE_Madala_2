@@ -1,0 +1,25 @@
+extends layout/layout
+
+block vars
+  -title = 'about'
+  -bodyClass = 'about-page'
+
+block container
+  section.section-about
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#blog") Về chúng tôi
+      .section-about__wrap
+        h3.heading-main Về chúng tôi
+        .row
+          .col-sm-12.col-lg-6
+            .section-about__img
+              img(src="/images/about.png" alt="about")
+          .col-sm-12.col-lg-6
+            .section-about__content
+              .section-about__logo
+                img(src="/images/logo.png" alt="logo")
+              h3.section-about__title Giới thiệu chung về mỹ phẩm handmade Mandala
+              p.section-about__text Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.  
+              a(href="#").section-about__link Xem thêm

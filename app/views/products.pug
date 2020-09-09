@@ -1,0 +1,67 @@
+extends layout/layout
+
+block vars
+  -title = 'products'
+  -bodyClass = 'producs-page'
+
+block  script
+  script(src="scripts/accordion.js")
+  script(src="scripts/products.js")
+
+block container 
+  section.product-list
+    .container
+      .path
+        each path_data in detail_path_data
+          a.path__name(href=path_data.link)= path_data.name
+    .banner
+      .container
+        .banner__wrap
+          p.banner__sale Giảm giá 50%
+          p.banner__time Trong vòng 3 ngày
+            span (25/5 - 28/5/2015)
+    .product-list__wrapper
+      .container
+        .row
+          .col-sm-12.col-md-12.col-lg-3
+            .product-list__left
+              .category
+                h3.heading-secondary Danh mục sản phẩm
+                each category in categorise_data
+                  ul.category__list= category.title
+                    each category_item in category.item
+                      li.category__item(value= category_item.value)= category_item.name
+              .compare-product
+                h3.heading-secondary So sánh sản phẩm
+                p.compare-product__msg Bạn chưa có sản phẩm nào để so sánh
+
+              .tag
+                h3.heading-secondary tag sản phẩm
+                ul.tag__list
+                  each tag in product_tag
+                    li.tag__item
+                      a(href="#").tag__link= tag.name
+
+              .store
+                p.store__name mandala store
+          .col-sm-12.col-md-12.col-lg-9
+            .product-list__right
+              .control-bar
+                .control-bar__show
+                  .grid.active
+                    i.fas.fa-th-large
+                  .list
+                    i.fas.fa-list
+                .control-bar__page
+                  .pagination-wrapper
+
+              .product-show#product-show
+
+              .control-bar
+                .control-bar__show
+                  .grid.active
+                    i.fas.fa-th-large
+                  .list
+                    i.fas.fa-list
+                .control-bar__page
+                  .pagination-wrapper

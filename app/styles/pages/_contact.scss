@@ -1,0 +1,58 @@
+.section-contact {
+  margin-bottom: 7.8rem;
+
+  .heading-main {
+    margin-bottom: 2.8rem;
+  }
+
+  &__map {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__form {
+    @include maxWidth($tablet) {
+      margin-top: 2rem;
+    }
+  }
+
+  .form {
+    &__title {
+      margin-bottom: 2.8rem;
+      font-size: $font-s16;
+      text-transform: uppercase;
+    }
+
+    &__group {
+      display: flex;
+      margin-bottom: 3rem;
+    }
+
+    &__lable {
+      width: 11rem;
+      margin-right: 1rem;
+      margin: auto 0;
+      font-size: $font-s16;
+      font-weight: $font-w7;
+
+      &-textarea {
+        margin-top: 5px;
+      }
+    }
+
+    &__obligatory {
+      margin-left: 5px;
+    }
+
+    &__input {
+      padding: 4px;
+    }
+  }
+
+  .btn {
+    display: block;
+    padding: 5px 20px;
+    margin-left: auto;
+  }
+}

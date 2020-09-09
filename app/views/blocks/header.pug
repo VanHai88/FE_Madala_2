@@ -1,0 +1,52 @@
+.header
+  .container
+    .header__wrap
+      .header__wrap-logo
+        a(href='#')
+          img(src="./images/logo.png")
+      nav.header__wrap-nav
+        .nav__mobile
+          a.nav__toggle(href='#')
+            span
+        ul.nav__list
+          each list in menus
+            li.list__item
+              if list.submenu
+                +link(list.link).list__item-link= list.name
+                  i.fas.fa-chevron-down.icon-down
+                .nav__dropdown.nav__dropdown-control
+                  .arrow__up
+                  .row
+                    each sublist in list.submenu
+                      .col-sm-12.col-md-4
+                        p.menu__title= sublist.title_name
+                          ul.list__item-child
+                            each item in sublist.submenu_item
+                              li.sub__child
+                                a.sub__child-item(href=item.link)= item.name
+              else
+                +link(list.link).list__item-link= list.name
+
+      .header__icon
+        button.header__icon-cart.cart-control
+          a(href="./cart.html")
+            i.fas.fa-shopping-cart
+          .product__list-hover
+            .product__list
+              .arrow__up
+              each product in cart_products
+                .product__list-item
+                  img(src=product.image)
+                  .product__content
+                    p.product__content-title= product.name
+                    p.product__content-price= product.price
+                      span.price__icon đ
+                  .product__remove
+                    i.fas.fa-plus
+              .product__list-total
+                p.total__title Tổng số
+                p.total__price 240.000
+                  span.price__icon đ
+              a.btn__cart(href="./cart.html") GIỎ HÀNG
+        button.header__icon-search
+          i.fas.fa-search

@@ -1,0 +1,472 @@
+.section-product-detail {
+  margin-bottom: 7rem;
+
+  &__left {
+    display: flex;
+  }
+
+  &__img {
+    @include flex(column, center, center);
+    height: 57rem;
+    margin-right: 3rem;
+
+    @include maxWidth($mobile) {
+      height: 40rem;
+    }
+
+    .slide-top {
+      margin-bottom: 0.6rem;
+
+      &::after {
+        @include fontIcon("\f062", $font-s22);
+      }
+    }
+
+    .slide-bottom {
+      margin-top: 0.6rem;
+
+      &::after {
+        @include fontIcon("\f063", $font-s22);
+      }
+    }
+  }
+
+  &__slider {
+    height: 33rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__thumbnail {
+    @include size(7rem);
+    margin: 0.6rem 0;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &__featured {
+    @include size(57rem);
+    display: flex;
+    border: 1px solid $color-grey-light-4;
+
+    @include maxWidth($tablet) {
+      @include size(59.5rem);
+    }
+
+    @include maxWidth($mobile) {
+      @include size(34.5rem);
+      margin: auto 0;
+    }
+
+    img {
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+  .thumbnail__active {
+    border: 1px solid $color-grey-light-4;
+  }
+
+  .arrow {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .arrow:hover {
+    color: $color-green-dark-1;
+    opacity: 1;
+  }
+
+  &__right {
+    font-family: $font-OpenSans;
+
+    @include maxWidth($tablet) {
+      margin-top: 5rem;
+    }
+
+    .product {
+      &__name {
+        margin-bottom: 1.5rem;
+        color: $color-grey-dark-4;
+        font-size: $font-s20;
+        text-transform: uppercase;
+      }
+
+      &__category {
+        margin-bottom: 2.3rem;
+        color: $color-grey-dark-3;
+        font-size: $font-s13;
+        text-transform: uppercase;
+      }
+
+      &__price {
+        margin-bottom: 32px;
+        font-family: $font-lobster;
+        font-size: $font-s29;
+      }
+
+      &__price-first {
+        margin-left: 10px;
+        color: $color-grey-light-5;
+        font-size: $font-s20;
+      }
+
+      &__desc {
+        margin-bottom: 2.5rem;
+        color: $color-grey-dark-3;
+        font-size: $font-s13;
+        line-height: 1.5;
+      }
+
+      &__form {
+        max-width: 38.5rem;
+      }
+    }
+
+    .form__buttons {
+      .btn {
+        padding: 1.3rem 1.6rem;
+        border-radius: 1.6rem;
+        &:not(:last-child) {
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .social-network {
+    @include flex(null, start, stretch, wrap);
+    margin-top: 1.8rem;
+
+    &__title {
+      margin-top: auto;
+      margin-right: 1.5rem;
+
+      @include maxWidth($mobile) {
+        width: 100%;
+        margin-bottom: 2.7rem;
+      }
+
+      span {
+        color: $color-red-dark-1;
+      }
+    }
+
+    .btn {
+      padding: 0 0.4rem;
+      border-radius: 0.3rem;
+      font-size: $font-s12;
+      font-weight: $font-w7;
+      text-transform: none;
+
+      .item__icon {
+        font-size: $font-s14;
+
+        &--in {
+          padding-right: 0.4rem;
+          border-right: 1px solid $color-blue-light-3;
+        }
+
+        &--tweet {
+          color: $color-blue-light-4;
+        }
+      }
+
+      .item__name {
+        margin-left: 0.5rem;
+      }
+
+      &__in {
+        color: $color-white;
+        background-color: $color-blue-light-2;
+      }
+
+      &__google {
+        color: $color-red-dark-2;
+      }
+
+      &__pinterest {
+        margin-left: 15px;
+        color: $color-red-dark-1;
+      }
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      display: flex;
+      margin-right: 1rem;
+    }
+
+    .icon__google {
+      font-size: 16px;
+      font-family: $font-noto;
+      line-height: 0;
+    }
+
+    .icon__pinterest {
+      font-family: $font-lobster;
+    }
+
+    .count {
+      position: relative;
+      display: none;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid $color-grey-dark-5;
+
+      margin: auto;
+      margin-left: 6px;
+      border-radius: 0.5rem;
+      font-size: 12px;
+      transition: all 0.5s;
+
+      .arrow-left {
+        @include absolute(5px, 23px);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 5px solid $color-black;
+
+        &::after {
+          content: "";
+          @include absolute(-5px, -6px);
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-right: 5px solid $color-white;
+        }
+      }
+    }
+  }
+}
+
+.section-detail-additional {
+  margin-bottom: 3rem;
+  font-family: $font-OpenSans;
+
+  &__right {
+    @include maxWidth($tablet) {
+      display: none;
+    }
+  }
+
+  .overview__Highlights,
+  .product-info,
+  .product-rating {
+    display: none;
+  }
+
+  .overview {
+    &__list {
+      display: flex;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid $color-grey-light-3;
+      margin-bottom: 9rem;
+      color: $color-grey-light-6;
+    }
+
+    &__active {
+      display: block;
+      color: $color-black;
+    }
+
+    &__item {
+      font-size: $font-s20;
+      font-weight: $font-w7;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 2.8rem;
+      }
+    }
+
+    .product-info {
+      &__img {
+        text-align: center;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      &__desc {
+        color: $color-grey-dark-3;
+        font-size: $font-s13;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .Highlights {
+    &__item {
+      display: flex;
+      margin-bottom: 7.2rem;
+
+      &:nth-child(odd) {
+        @include maxWidth($mobile) {
+          flex-wrap: wrap;
+          flex-direction: column-reverse;
+        }
+
+        .Highlights__info {
+          margin-right: 11.5rem;
+        }
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        @include maxWidth($mobile) {
+          flex-wrap: wrap;
+          flex-direction: column-reverse;
+        }
+
+        .Highlights__image {
+          @include maxWidth($mobile) {
+            margin-left: auto;
+          }
+        }
+
+        .Highlights__info {
+          text-align: end;
+          margin-left: 11.5rem;
+        }
+
+        .Highlights__title {
+          &::after {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: $font-s13;
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 4.5rem;
+        padding-top: 0.7rem;
+        border-bottom: 1px solid $color-grey-light-3;
+        margin-bottom: 1.9rem;
+      }
+    }
+
+    &__desc {
+      color: $color-grey-dark-3;
+      font-size: $font-s13;
+      line-height: 1.5;
+    }
+  }
+
+  .btn {
+    margin-top: 1rem;
+    border-radius: 2rem;
+    background-color: $color-green-dark-1;
+    color: $color-white;
+  }
+
+  .bestseller {
+    margin-bottom: 6rem;
+  }
+
+  .product-rating__comment {
+    margin-top: 3rem;
+
+    .auther {
+      &__name {
+        margin: 0 0.4rem;
+        color: $color-green-dark-1;
+        font-size: $font-s14;
+      }
+
+      &__avatar {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 8rem;
+      }
+    }
+
+    .connent__item {
+      margin-left: 1rem;
+      font-size: $font-s14;
+    }
+  }
+
+  .product-rating {
+    .form {
+      &__list {
+        display: flex;
+      }
+
+      &__item {
+        margin-bottom: 1rem;
+        color: $color-grey-light-5;
+        font-size: $font-s20;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &__name {
+        font-weight: $font-w6;
+      }
+    }
+
+    .product__name {
+      margin-top: 2px;
+      font-size: $font-s14;
+      font-weight: $font-w6;
+      text-transform: uppercase;
+    }
+
+    .comment {
+      &__product {
+        display: flex;
+      }
+
+      &__auther {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        font-size: $font-s13;
+        font-weight: $font-w6;
+      }
+
+      &__content {
+        display: flex;
+        align-items: center;
+      }
+
+      &__date {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .rating {
+      &__list {
+        display: flex;
+        align-items: stretch;
+        margin-left: 1rem;
+      }
+
+      &__item {
+        margin-bottom: 1rem;
+        color: $color-red-dark-1;
+        font-size: $font-s20;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

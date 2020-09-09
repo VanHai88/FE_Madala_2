@@ -1,0 +1,20 @@
+.form {
+  &__ground {
+    margin-bottom: 2rem;
+  }
+
+  &__lable {
+    margin-bottom: 1.5rem;
+    font-size: $font-s14;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid $color-grey-light-3;
+    color: $color-grey-dark-3;
+    font-size: $font-s14;
+    outline: none;
+    resize: none;
+  }
+}

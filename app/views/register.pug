@@ -1,0 +1,55 @@
+extends layout/layout
+
+block vars
+  -title = 'register'
+  -bodyClass = 'register-page'
+
+block container  
+  section.sign-in
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#dangky") Đăng ký
+      .sign-in__wrap
+        h3.heading-main đăng ký
+        form.form(action="#")
+          .form-info__personal
+            h4.form__title thông tin cá nhân
+            .form__group
+              label.form__lable Tên trước
+                span.form__obligatory *
+              input.form__input(type="text")
+
+            .form__group
+              label.form__lable Tên sau
+                span.form__obligatory *
+              input.form__input(type="text")
+
+            .form__group
+              label.form__lable Email
+                span.form__obligatory *
+              input.form__input(type="text")
+
+            .form__group
+              label.form__lable Password
+                span.form__obligatory *
+              input.form__input(type="password")
+            .form__group.form__announce
+              input#announce(type="checkbox")
+              label.form__lable(for="announce")  Đăng ký nhận bản tin
+          .form-info__login
+            h4.form__title thông tin đăng nhập
+            .form__group
+              label.form__lable Mật khẩu
+                span.form__obligatory *
+              input.form__input(type="password")
+
+            .form__group
+              label.form__lable Xác nhận mật khẩu
+                span.form__obligatory *
+              input.form__input(type="password")
+          .form__buttons
+            button.btn.btn--border.btn--black(type="submit") Gửi
+            button.btn.btn--border.btn--black(type="submit") 
+              img(src="/images/back_come.svg" alt="icon")
+              |quay lại

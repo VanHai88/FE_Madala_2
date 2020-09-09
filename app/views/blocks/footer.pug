@@ -1,0 +1,53 @@
+.footer
+  .container
+    .row
+      .col-sm-12.col-lg-4
+        .footer__block
+          p.footer__block-title LIÊN HỆ VỚI CHÚNG TÔI
+          ul.footer__list.footer__address
+            li.footer__address-item
+              .list__item-address 
+                img(src="/images/map.svg" alt="map")
+              a.address__item-add(href="#") Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội
+            li.footer__address-item
+              div
+                img(src="/images/phone.svg" alt="phone")
+              a(href="#") (04) 6674 2332 
+              span.space-line -
+              div
+                img(src="/images/fax.svg" alt="fax")
+              a(href="#")  (04) 3786 8904
+            li.footer__address-item
+              div
+                img(src="/images/phone.svg" alt="phone")
+              a(href="#") (08) 6680 9686  
+              span.space
+              div
+                img(src="/images/email.svg" alt="email")
+              a.address__item-email(href="#") Support@bizweb.vn
+      each footer in footers
+        if footer.last
+          .col-sm-12.col-lg-2
+            .footer__block
+              p.footer__block-title= footer.name
+                ul.footer__list.footer__policy.footer__last
+                  each item in footer.subfooter
+                    li.footer__policy-item
+                      a.item__policy-link(href="#")= item
+        else
+          .col-sm-12.col-lg-2
+            .footer__block
+              p.footer__block-title= footer.name
+                ul.footer__list.footer__policy
+                  each item in footer.subfooter
+                    li.footer__policy-item
+                      a.item__policy-link(href="#")= item
+  .footer__extend
+    .container
+      .row
+        .col-sm-12.col-md-8
+          .footer__extend-copy
+            p.footer__extend-text &copy; Copyright 2008-2014 DKT Technology JSC
+        .col-sm-12.col-md-4
+          .footer__extend-image
+            img(src="/images/footer_extend.png" alt="pay")

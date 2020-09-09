@@ -1,0 +1,40 @@
+.item-proposal {
+  &__infor {
+    margin-left: 2.5rem;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed #e6e6e6;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__name {
+    margin-bottom: 1.5rem;
+    font-size: $font-s13;
+  }
+
+  &__rating {
+    margin-bottom: 1.5rem;
+
+    i {
+      &:not(:last-child) {
+        margin-right: 2px;
+      }
+    }
+
+    .quantity {
+      margin-left: 0.5rem;
+      color: $color-grey-dark-3;
+    }
+  }
+
+  &__price {
+    font-family: $font-lobster;
+    font-size: $font-s14;
+  }
+}

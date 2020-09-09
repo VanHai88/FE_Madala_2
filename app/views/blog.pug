@@ -1,0 +1,37 @@
+extends layout/layout
+
+block vars
+  -title = 'blog'
+  -bodyClass = 'blog-page'
+
+block script
+  script(src="scripts/blog.js")
+
+block container
+  section.section-blog
+    .container
+      .path
+        a.path__name(href= "#home") Home
+        a.path__name(href= "#blog") Blog
+      .blog__wrap
+        h3.blog__title BLOG
+        .blog__block
+          .control-bar
+            .control-bar__show
+              .grid.active
+                i.fas.fa-th-large
+              .list
+                i.fas.fa-list
+            .control-bar__page
+              .pagination-wrapper
+
+          .blog-show#blog-show
+
+          .control-bar
+            .control-bar__show
+              .grid.active
+                i.fas.fa-th-large
+              .list
+                i.fas.fa-list
+            .control-bar__page
+              .pagination-wrapper

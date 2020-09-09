@@ -1,0 +1,129 @@
+.footer {
+  padding-top: 42px;
+  background-color: $color-grey-dark-15;
+
+  &__block {
+    &-title {
+      color: $color-grey-light-12;
+      font-family: $font-OpenSans;
+      font-size: $font-s18;
+      font-weight: $font-w6;
+
+      white-space: nowrap;
+    }
+
+    .footer {
+      &__list {
+        margin-top: 23px;
+        margin-bottom: 25px;
+        line-height: 30px;
+
+        @media (max-width: $tablet) {
+          padding-bottom: 17px;
+          border-bottom: 1px solid $color-grey-dark-16;
+        }
+
+        li {
+          a {
+            color: $color-grey-dark-17;
+            font-family: $font-primary;
+            font-size: $font-s14;
+            text-decoration: none;
+
+            &:hover {
+              color: $color-green-dark-1;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+
+      &__last {
+        @media (max-width: $tablet) {
+          border-bottom: none;
+          margin-bottom: 25px;
+        }
+      }
+      &__address {
+        &-item {
+          display: flex;
+          font-weight: $font-w6;
+
+          a {
+            margin-left: 5px;
+          }
+
+          .space {
+            margin: 0 10px;
+
+            &-line {
+              margin: 0px 5px;
+              font-size: $font-s23;
+              line-height: 24px;
+            }
+          }
+
+          .address__item-email {
+            font-style: italic;
+          }
+
+          .address__item-add {
+            margin-left: 12px;
+          }
+        }
+      }
+      &__policy {
+        &-item {
+          position: relative;
+        }
+
+        .item__policy-link {
+          white-space: nowrap;
+
+          &:hover::before {
+            content: "";
+            position: absolute;
+            top: 14px;
+            left: 0px;
+            width: 4px;
+
+            height: 4px;
+            background-color: $color-green-dark-1;
+          }
+          &:hover {
+            margin-left: 10px;
+            @media (min-width: $xl) {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__block {
+    margin-top: 14px;
+  }
+
+  &__extend {
+    padding: 20px 0;
+    border-top: 1px solid $color-grey-dark-16;
+    color: $color-grey-dark-17;
+    font-family: $font-primary;
+
+    font-size: $font-s12;
+
+    &-text {
+      font-weight: $font-w6;
+      line-height: 25px;
+    }
+    &-image {
+      text-align: end;
+
+      @media (max-width: $md) {
+        text-align: start;
+        padding-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,228 @@
+.blog-detail {
+  margin-bottom: 10rem;
+
+  &__left {
+    @include maxWidth($tablet) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    font-size: $font-s28;
+
+    @include maxWidth($mobile) {
+      display: none;
+    }
+  }
+
+  .new-post {
+    margin-bottom: 7rem;
+    cursor: pointer;
+
+    &__title {
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid $color-grey-light-3;
+      margin-bottom: 2.7rem;
+      font-size: $font-s18;
+
+      text-transform: uppercase;
+    }
+
+    &__item {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__img {
+      position: relative;
+      width: calc(40%);
+      height: 5rem;
+
+      @include pictureFrames(5px, 45deg, 5px);
+    }
+
+    &__content {
+      @include absolute(-5px, 0);
+      width: calc(60% - 15px);
+    }
+
+    &__date {
+      font-size: $font-s28;
+      font-weight: $font-w7;
+
+      .month {
+        font-size: $font-s14;
+      }
+    }
+
+    &__author {
+      margin-top: 1rem;
+      font-size: $font-s14;
+      font-style: italic;
+    }
+  }
+
+  .tag {
+    margin-bottom: 5rem;
+
+    &__link {
+      &:hover {
+        background-color: $color-green-dark-1;
+      }
+    }
+  }
+
+  .video {
+    .btn {
+      padding: 20px;
+      border-radius: 105px;
+      border: none;
+      background-color: $color-grey-dark-8;
+    }
+
+    .icon__play {
+      top: 12px;
+      left: 16px;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+
+      border-left: 12px solid $color-white;
+    }
+  }
+
+  .blog-show__item {
+    .item {
+      &__img {
+        height: 44rem;
+        margin-top: 3.2rem;
+        @include pictureFrames(32px, 50deg, 40px);
+
+        @include maxWidth($mobile) {
+          height: 24.7rem;
+          margin-top: 1rem;
+          @include pictureFrames(18px, 50deg, 20px);
+        }
+      }
+
+      &__name {
+        margin-top: 5rem;
+        margin-bottom: 2.5rem;
+        font-size: $font-s30;
+        font-weight: $font-w6;
+
+        @include maxWidth($mobile) {
+          margin-top: 2.5rem;
+          font-size: $font-s20;
+        }
+      }
+
+      &__desc {
+        padding-top: 3rem;
+        font-size: $font-s16;
+        line-height: 25px;
+
+        @include maxWidth($mobile) {
+          padding-top: 2rem;
+          font-size: $font-s14;
+        }
+      }
+
+      &__author {
+        padding-bottom: 2.5rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        font-size: $font-s16;
+      }
+    }
+
+    .detail__read,
+    .detail__comment {
+      font-size: $font-s16;
+    }
+  }
+
+  .tag-choose {
+    display: flex;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-grey-light-3;
+    margin-top: 6rem;
+
+    margin-bottom: 3.5rem;
+    font-size: $font-s18;
+
+    @include maxWidth($mobile) {
+      margin-top: 3.5rem;
+    }
+
+    &__name {
+      color: $color-grey-light-6;
+    }
+
+    &__list {
+      display: flex;
+      margin-left: 17px;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .blog-detail__form {
+    .form {
+      &__title {
+        margin-bottom: 3rem;
+        font-size: $font-s18;
+        text-transform: uppercase;
+      }
+
+      &__group {
+        display: flex;
+        @include maxWidth($mobile) {
+          display: block;
+        }
+
+        &:not(:first-child) {
+          margin-top: 3.5rem;
+
+          @include maxWidth($mobile) {
+            margin-top: 1.5rem;
+          }
+        }
+      }
+
+      &__lable {
+        width: 7rem;
+        margin-top: 1.5rem;
+        font-size: $font-s16;
+      }
+
+      &__obligatory {
+        margin-left: 5px;
+        color: $color-green-dark-1;
+      }
+
+      .btn {
+        padding: 0 23px;
+        padding-top: 12px;
+        padding-bottom: 17px;
+        margin-top: 2.5rem;
+
+        margin-left: 6.5rem;
+        font-size: $font-s16;
+
+        @include maxWidth($mobile) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

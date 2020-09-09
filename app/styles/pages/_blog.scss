@@ -1,0 +1,29 @@
+.section-blog {
+	margin-bottom: 5rem;
+
+	.blog__title {
+		margin-bottom: 2.8rem;
+		font-size: $font-s28;
+	}
+
+	.control-bar {
+		@include maxWidth($tablet) {
+			margin-top: 0;
+		}
+	}
+
+	.blog-show {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 5px 30px;
+		margin-bottom: 5.5rem;
+
+		@include maxWidth($tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include maxWidth($mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+}
